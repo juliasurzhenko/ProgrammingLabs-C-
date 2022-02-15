@@ -5,7 +5,20 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	setlocale(LC_CTYPE, "ukr");
+	int a;
+	std::cout << "Введіть 1 число";
+	std::cin >> a;
+	int b;
+	std::cout << "Введіть 2 число";
+	std::cin >> b;
+	int c;
+	std::cout << "Введіть 3 число";
+	std::cin >> c;
+	float kor;
+	kor = sqrt((a * b) + (a * c) + (b * c));
+	std::cout << kor
+		;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

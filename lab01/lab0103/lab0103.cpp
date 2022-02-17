@@ -23,7 +23,6 @@ int main()
 		cout << "S is " << S << endl;
 		cout << "R is " << R << endl;
 		cout << "r is " << r << endl;
-		cout << "h is " << h << endl;
 	}
 	else {
 		cout << "Error\n";

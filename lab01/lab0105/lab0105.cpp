@@ -9,15 +9,22 @@ using namespace std;
 int main()
 {
 	setlocale(LC_CTYPE, "ukr");
-	float a, b, alf, z1;
-	cout << "Ввести альфа";
+	float a, b, alf, z1, z2;
+
+	cout << "Ввести альфа ";
 	cin >> alf;
+
 	a = (sin(4 * alf)) / (1 + cos(4 * alf));
 	b = (cos(2 * alf)) / (1 + cos(2 * alf));
 	z1 = a * b;
+	//z2 = cotan(3 / 2 * 3.14 - alf) спростимо до tan(alf);
+	z2 = tan(alf);
 	cout << "z1=" << z1 << endl;
-	
+	cout << "z2=" << z2;
+	return 0;
 }
+
+	
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"

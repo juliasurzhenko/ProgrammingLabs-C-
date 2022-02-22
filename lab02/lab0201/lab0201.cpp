@@ -22,7 +22,7 @@ int main()
     cout << "Введіть число: ";
     cin >> c;
     cout << "Введіть число: ";
-    cin >> d;
+    cin >> d; 
     if (a != b && a != c)
     {
         cout << endl << a * a;

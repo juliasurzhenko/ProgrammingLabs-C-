@@ -10,7 +10,7 @@ int main()
     {
         float x, y;
         setlocale(LC_CTYPE, "ukr");
-
+         
         printf("Введіть x,y= ");
         scanf_s("%f%f", &x, &y);
 

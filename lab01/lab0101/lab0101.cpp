@@ -4,7 +4,7 @@
 #include <iostream>
 
 int main()
-{
+{ 
 	setlocale(LC_CTYPE, "ukr");
 	int a;
 	std::cout << "Введіть 1 число";

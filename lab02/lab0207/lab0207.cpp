@@ -11,16 +11,16 @@ int main()
     int i, answer=0;
     int a;
     cout << "input i= " ;
-    cin >> i;
+    cin >> i; //вводимо к-сть натуральних чисел, суму яих треба буде обчислити
     for (int j = 0; j < i; j++) {
       
         cout << "Enter a"<<  j+1 << "= "; 
-        cin >> a;
+        cin >> a; //вводимо дійсні числа, їх кількість має = i
        
         answer = answer +abs(a);
 
     }
-    cout << answer;
+    cout << answer; //виведення суми чисел
 
 
     return 0;

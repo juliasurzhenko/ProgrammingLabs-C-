@@ -1,30 +1,37 @@
-﻿// lab0206.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// lab0204.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include <iostream>
-#include <math.h>
-
+#include<cmath>
 
 using namespace std;
-
-int main(){
+int main()
+{
     setlocale(LC_CTYPE, "ukr");
-    double sum, i, z;
-    int n;
-    cin >> n;
-    sum = 0;
-    z = 0;
-    for (i = n; i > 0; i--)
-    {
-        z = z + sin(i);
-        sum = sum + 1 / z;
+    float F;
+    int a;
+    cout << "Введіть a ";
+    cin >> a;
+    int b;
+    cout << "Введіть b ";
+    cin >> b;
+    int c;
+    cout << "Введіть c ";
+    cin >> c;
+    int x;
+    cout << "Введіть x ";
+    cin >> x;
+    if (x < 5 and c != 0) {
+        F = -a * pow(x, 2) - b;
     }
-    cout << sum;
-
-    return 0;
-
+    else if (x > 5 and c == 0) {
+        F = ((x - a) / x);
+    }
+    else {
+        F = (-x / c);
+    }
+    cout << "F=" << F;
 }
-
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
 

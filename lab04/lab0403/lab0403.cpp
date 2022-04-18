@@ -2,10 +2,35 @@
 //
 
 #include <iostream>
+#include <math.h>
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    int p = 5, i, j;
+    float x;
+    int min, max;
+    // cout << "vvesti rozmir masivu: ";
+    // cin >> p;
+    // cout << "vvesti elementy masivy: ";
+   //  for (a = 0; a< p; a++) {
+   //   cin >> arr[p];
+   //    }
+
+    float arr[5] = { 1.0, 5.8, 23.4, 54.3, 57.9 };
+    cout << "vvedit x: ";
+    cin >> x;
+    for (int a = 0; a < p - 1; a++) {
+
+        if (arr[a] > x) {
+            min = a - 1;
+            max = a;
+            cout << min << endl;
+            cout << max << endl;
+            break;
+        }
+    }
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

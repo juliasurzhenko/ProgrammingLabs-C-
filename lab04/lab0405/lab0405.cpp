@@ -1,53 +1,57 @@
-﻿// lab0404.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// lab0405.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
+
 #include <iostream>
+#include <conio.h>
 
 using namespace std;
 
-int main() {
+int main()
+{
+	const int n = 3;
+	int B[n][n] =
+	{
+		{ 2, 4, 1 },
+		{ 4, 2, 0 },
+		{ 0, 3, 2 }
+	};
+	int C[n];
+	int Sum;
+	for (int j = 0; j < n; j++) {
+		Sum = 0;
+		for (int i = 0; i < n; i++) {
+			Sum += B[i][j];
+		};
+		C[j] = Sum;
+		cout << C[j] << " ";
+	};
 
-    int i, j, m, n, x, M[10][10]; 
-     cout << "Enter number of rows and columns : ";
-      cin >> m >> n;
-      if (m != n)
-      {
-          cout << "Matrix is not a square matrix!";
-          exit(0);
-      }
-     cout << "Enter elements of matrix : ";
-      for (i = 0; i < m; i++)
-          for (j = 0; j < n; j++) 
-              cin >> M[i][j];
-      cout << "Matrix : \n ";
-      for (i = 0; i < m; i++)
-      {
-         for (j = 0; j < n; j++)
-             cout << M[i][j] << " ";
-          cout << "\n ";
-      }
-
-   /* int i, j;
-    int N = 4;
-    int M[4][4] =
-    {
-        { 5, 4, 8, 4 },
-        { 4, 2, 16, 3 },
-        { 6, 8, 2, 9 },
-        { 5, 1, 2, 9 }
-    };
-    */
-    int sum = 0;
-    for (int i = 0; i < n; i++) {
-        if (M[i][n - 1 - i] % 4 == 0) {
-            sum += M[i][n - 1 - i];
-        }
-    }
-
-    //for (i=0; i<3; i++)
-     //   for (j=0; j<4; j++)
-      //      Matr[i][j] = 0;
-    cout << sum;
 }
+
+
+	//по стовпцю новий масив одновим. 1 ел.=сума по 1 стовпцю ітд.
+	//
+
+
+	//Дано таблицю В [і, j ], де i,j = 1,2,..., п . За допомогою таблиці знайти елементи масиву Сj, j =
+	//1, 2, ..., n, значення яких дорівнюють сумі елементів відповідних стовпчиків таблиці.
+
+
+
+
+	//оскільки в умові вказано, що i та j = 1,2,..n, то матриця квадратна
+    //int Matrix[10][10];
+	//int n, i, j;
+	//cout << "Vvedit rozmirnist' massivu: ";
+	//cin >> n;
+	//for (i = 0; i < n; i++) {
+		//for (j = 0; j < n; j++) {
+		//	Matrix[i][j] = 0;
+			
+		//}
+//	}
+	
+
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"

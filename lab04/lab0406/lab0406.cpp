@@ -1,53 +1,59 @@
-﻿// lab0404.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// lab0406.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
+
 #include <iostream>
+
 
 using namespace std;
 
-int main() {
-
-    int i, j, m, n, x, M[10][10]; 
-     cout << "Enter number of rows and columns : ";
-      cin >> m >> n;
-      if (m != n)
-      {
-          cout << "Matrix is not a square matrix!";
-          exit(0);
-      }
-     cout << "Enter elements of matrix : ";
-      for (i = 0; i < m; i++)
-          for (j = 0; j < n; j++) 
-              cin >> M[i][j];
-      cout << "Matrix : \n ";
-      for (i = 0; i < m; i++)
-      {
-         for (j = 0; j < n; j++)
-             cout << M[i][j] << " ";
-          cout << "\n ";
-      }
-
-   /* int i, j;
-    int N = 4;
-    int M[4][4] =
-    {
-        { 5, 4, 8, 4 },
-        { 4, 2, 16, 3 },
-        { 6, 8, 2, 9 },
-        { 5, 1, 2, 9 }
-    };
-    */
-    int sum = 0;
-    for (int i = 0; i < n; i++) {
-        if (M[i][n - 1 - i] % 4 == 0) {
-            sum += M[i][n - 1 - i];
-        }
-    }
-
-    //for (i=0; i<3; i++)
-     //   for (j=0; j<4; j++)
-      //      Matr[i][j] = 0;
-    cout << sum;
+int main()
+{
+	int const N = 4, M = 5; //N-автобуси,M-зупинки
+	int Matr[N][M] = {
+		{1, 0, 1, 0, 1},
+		{0, 0, 1, 0, 1},
+		{1, 1, 0, 1, 1},
+		{0, 1, 1, 0 ,0}
+	};
+	
+	int Sum;
+	int max = 0;
+	for (int j = 0; j < M; j++) {
+		Sum = 0;
+		for (int i = 0; i < N; i++) {
+			Sum += Matr[i][j];
+			
+			if (Sum > max)
+				max = Sum;
+		};
+		
+	};
+cout << max;
 }
+	//int Max=Matr[0][0];
+	//int Max;
+	//int *m=&Matr[N][M];
+	//if (*m > 0) {
+	//	for (int i = 0; i < N; i++) {
+	//		for (int j = 0; j < M; j++) {
+
+	//			Max = Matr[i][j];
+	//			cout << "[" << i << "]" << "[" << j << "]";
+
+		
+
+		//for (int j = 0; j < M; j++) {
+		//	if (Matr[i][j] > Max) {
+		//		Max = Matr[i][j];
+			//	cout << "[" << i << "]" << "[" << j << "]";
+			//}
+				
+			
+	
+
+
+
+	
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"

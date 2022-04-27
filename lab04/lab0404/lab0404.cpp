@@ -6,19 +6,21 @@ using namespace std;
 
 int main() {
 
+    setlocale(LC_CTYPE, "ukr");
+
     int i, j, m, n, x, M[10][10]; 
-     cout << "Enter number of rows and columns : ";
+     cout << "Введіть кількість рядків і стовпців: ";
       cin >> m >> n;
       if (m != n)
       {
-          cout << "Matrix is not a square matrix!";
+          cout << "Матирця не квадратна";
           exit(0);
       }
-     cout << "Enter elements of matrix : ";
+     cout << "Введіть елементи матриці : ";
       for (i = 0; i < m; i++)
           for (j = 0; j < n; j++) 
               cin >> M[i][j];
-      cout << "Matrix : \n ";
+      cout << "Матриця : \n ";
       for (i = 0; i < m; i++)
       {
          for (j = 0; j < n; j++)
@@ -26,26 +28,12 @@ int main() {
           cout << "\n ";
       }
 
-   /* int i, j;
-    int N = 4;
-    int M[4][4] =
-    {
-        { 5, 4, 8, 4 },
-        { 4, 2, 16, 3 },
-        { 6, 8, 2, 9 },
-        { 5, 1, 2, 9 }
-    };
-    */
     int sum = 0;
     for (int i = 0; i < n; i++) {
         if (M[i][n - 1 - i] % 4 == 0) {
             sum += M[i][n - 1 - i];
         }
     }
-
-    //for (i=0; i<3; i++)
-     //   for (j=0; j<4; j++)
-      //      Matr[i][j] = 0;
     cout << sum;
 }
 

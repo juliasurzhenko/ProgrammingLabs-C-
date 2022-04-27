@@ -8,14 +8,33 @@ using namespace std;
 
 int main()
 {
-	const int n = 3;
-	int B[n][n] =
+	setlocale(LC_CTYPE, "ukr");
+	//const int n = 3;
+	int B[10][10], n, m,j,i;
+	cout << "Введіть кількість рядків і стовпців: ";
+	cin >> m >> n;
+	if (m != n)
 	{
+		cout << "Матирця не квадратна";
+		exit(0);
+	}
+	cout << "Введіть елементи матриці : ";
+	for (i = 0; i < n; i++)
+		for (j = 0; j < m; j++)
+			cin >> B[i][j];
+	cout << "Матриця : \n ";
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < m; j++)
+			cout << B[i][j] << " ";
+		cout << "\n ";
+	}
+	/*{
 		{ 2, 4, 1 },
 		{ 4, 2, 0 },
 		{ 0, 3, 2 }
-	};
-	int C[n];
+	};*/
+	int C[10];
 	int Sum;
 	for (int j = 0; j < n; j++) {
 		Sum = 0;
@@ -23,7 +42,8 @@ int main()
 			Sum += B[i][j];
 		};
 		C[j] = Sum;
-		cout << C[j] << " ";
+		
+		cout   << C[j] << " ";
 	};
 
 }

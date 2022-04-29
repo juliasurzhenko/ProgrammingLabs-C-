@@ -4,20 +4,31 @@
 #include <iostream>
 #include <math.h>
 
+
 using namespace std;
 
 int main()
 {
-	long long int n, a, a1 = 1, a2 = 1, a3 = 2, a4 = 3;
-
+	int arr[100] = {};
+	int a, a1 = 1, a2 = 1, a3 = 2, a4 = 3, n,k, i;
+	cout << "kilkist elementiv: ";
 	cin >> n;
-	for (int k = 5; k <= n; k++) {
-		a = a3 * a4;
-		a3 = a4;
-		a4 = a;
-	}
-	cout << a << endl;
-
+	cout << a1;
+	cout << " ";
+	cout << a2;
+	cout << " ";
+	cout << a3;
+	cout << " ";
+	cout << a4;
+	cout << " ";
+	for (i = 0; i < n; i++) {
+		
+			a = a3 * a4;
+			a3 = a4;
+			a4 = a;
+			cout << a;
+			cout << " ";
+		}
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

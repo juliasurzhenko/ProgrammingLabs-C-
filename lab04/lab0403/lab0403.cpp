@@ -11,12 +11,6 @@ int main()
     int p = 5, i, j;
     float x;
     int min, max;
-    // cout << "vvesti rozmir masivu: ";
-    // cin >> p;
-    // cout << "vvesti elementy masivy: ";
-   //  for (a = 0; a< p; a++) {
-   //   cin >> arr[p];
-   //    }
 
     float arr[5] = { 1.0, 5.8, 23.4, 54.3, 57.9 };
     cout << "vvedit x: ";

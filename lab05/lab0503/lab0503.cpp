@@ -1,31 +1,33 @@
-﻿// lab0501.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-
+﻿// lab0503.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+//
+/*Задані два рядки. Визначити, чи є вони анаграмами, 
+тобто один рядок одержаний іншою перестановкою
+букв. Наприклад: рядки "БУК" і "КУБ" або 
+"СОЛЬ” і "ЛОСЬ" є анаграмами*/
 
 #include <iostream>
-#include <algorithm>
 #include <string>
-/*Визначити, скільки разів у даному тексті зустрічається 
-послідовність символів: 1) аб; 2) абв; 3) аба; 
-4)абаб.*/
-
 using namespace std;
-
 int main()
 {
-    setlocale(LC_CTYPE, "UKR");
-    string str1;
-    cout << "Введiть рядок: ";
-    getline(cin, str1);
-    string str[4] = { "ab","abv","aba","abab" };
-    for (int i = 0; i < 4; i++) {
-        cout << str[i] << endl;
+	setlocale(LC_CTYPE, "UKR");
+	string str1;
+	cout << "Введiть рядок: ";
+	getline(cin, str1);
+	setlocale(LC_CTYPE, "UKR");
+	string str2;
+	cout << "Введiть рядок: ";
+	getline(cin, str2);
 
-        int count = 0;
-        for (int j = 0; (j = str1.find(str[i], j)) != string::npos; j++) {
-            count++;
-        }    cout << count << "times" << endl;
-    }
-    
+	
+	string str_reverse = str1;
+	reverse(str_reverse.begin(), str_reverse.end());
+	if (str_reverse == str2) {
+		cout << "Анаграма" << endl;
+	}
+	else
+		cout << "Не анаграма" << endl;
+	
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

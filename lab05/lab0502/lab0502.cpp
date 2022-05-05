@@ -1,31 +1,38 @@
-﻿// lab0501.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-
+﻿// lab0502.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+//
+/*Дано текст S, у якому є хоча б одна крапка. Роздрукувати ту частину тексту, 
+що розташована: 1) до першої крапки;
+2) після другої крапки; 
+3) між першою та другою крапками 
+(якщо друга крапка відсутня,
+то до кінця тексту).*/
 
 #include <iostream>
-#include <algorithm>
 #include <string>
-/*Визначити, скільки разів у даному тексті зустрічається 
-послідовність символів: 1) аб; 2) абв; 3) аба; 
-4)абаб.*/
-
 using namespace std;
+
 
 int main()
 {
     setlocale(LC_CTYPE, "UKR");
-    string str1;
+    string s;
     cout << "Введiть рядок: ";
-    getline(cin, str1);
-    string str[4] = { "ab","abv","aba","abab" };
-    for (int i = 0; i < 4; i++) {
-        cout << str[i] << endl;
+    getline(cin, s);
+    string delimiter = ".";
 
-        int count = 0;
-        for (int j = 0; (j = str1.find(str[i], j)) != string::npos; j++) {
+    size_t pos = 0;
+    string part;
+    int count = 0;
+    while ((pos = s.find(delimiter)) != string::npos) {
+        if (count < 2) {
             count++;
-        }    cout << count << "times" << endl;
+            part = s.substr(0, pos);
+            cout << part << endl;
+            s.erase(0, pos + delimiter.length());
+        }
+        else
+            break;
     }
-    
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
